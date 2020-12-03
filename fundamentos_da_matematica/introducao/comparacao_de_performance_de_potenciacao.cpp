@@ -76,10 +76,11 @@ void metodo_estudante_avisado(const std::vector<unsigned int>& expoentes)
 		const unsigned int expoente = expoentes[i];
 		double res = 1, pot = base;
 		unsigned int j = 1;
-		do {
+		while(1) {
 			if(expoente & j) res *= pot;
+			if(!(j <<= 1)) break;
 			pot *= pot;
-		} while (j <<= 1);
+		}
 		sols[i] = res;
 	}
 	auto fim = std::chrono::steady_clock::now();
