@@ -59,10 +59,10 @@ int main()
     // sua arvore de natal vai ter altura n^2
     // e vai ter uma base de tamanho 4n-3
     int base = 6 * n - 5;
-    int nb_estrelas_na_linha_1_da_estrutura = 1;
+    int nb_estrelas_na_l1_da_estrutura = 1;
     for (int i = 0; i < n; i++)
     {
-        int nb_estrelas_na_l_atual = nb_estrelas_na_linha_1_da_estrutura;
+        int nb_estrelas_na_l_atual = nb_estrelas_na_l1_da_estrutura;
         for (int j = 0; j < n+i; j++)
         {
             int nb_espacos = (base - nb_estrelas_na_l_atual) / 2;
@@ -73,7 +73,7 @@ int main()
             std::cout << std::endl;
             nb_estrelas_na_l_atual += 2;
         }
-        nb_estrelas_na_linha_1_da_estrutura += 2;
+        nb_estrelas_na_l1_da_estrutura += 2;
     }
 
     std::cout << std::endl;
